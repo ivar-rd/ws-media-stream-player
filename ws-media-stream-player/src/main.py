@@ -86,7 +86,8 @@ def ffmpeg_decode_process(fragment_queue: multiprocessing.Queue, frame_queue: mu
                             stdin=subprocess.PIPE,
                             stdout=subprocess.PIPE,
                             #stderr=subprocess.DEVNULL, 
-                            bufsize=0)
+                            bufsize=0,
+                            executable='./import/ffmpeg/ffmpeg.exe')
 
     frame_size = 640 * 360 * 3
 
